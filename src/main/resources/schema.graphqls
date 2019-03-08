@@ -1,0 +1,22 @@
+type Node {
+    id: ID!
+    name: String
+    units: [Unit]
+}
+
+type Unit {
+    id: ID!
+    slot: Int
+    ports: [Port]
+}
+
+type Port {
+    id: ID!
+    number: Int
+    name: String
+    isUp: Boolean
+}
+
+type Query {
+  nodeById(id: ID): Node
+}
